@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <script>
+        outer:
+        for(let i = 0; i<3;i++)
+        {
+            for (let j = 0; j < 3; j++) 
+            {
+                console.log(i,j,"before");
+                
+                // iが１、jが１の時にラベルouterの処理を抜ける
+                if (i === 1 && j === 1) 
+                {
+                    break outer;    
+                }
+                console.log(i,j,"after");
+            }
+
+        }
+
+        console.log("get out");
+    </script>
+  </head>
+</html>

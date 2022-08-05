@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <script>
+        let obj = 
+        {
+            method(arg1,arg2)
+            {
+                return `${arg1}**${arg2}`;
+            },
+            prop: "propaty",
+
+            // getter
+            get prop2()
+            {
+                return this.prop+"!";
+            },
+
+            // setter
+            set prop3(x)
+            {
+                this.prop = x;
+            }
+        };
+
+        // output
+        console.log(obj.method("1","2"));
+        console.log(obj.prop);
+        console.log(obj.prop2);
+
+        obj.prop3 = "プロパティ";
+        console.log(obj.prop);
+        console.log(obj.prop2);
+
+    </script>
+  </head>
+</html>
