@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <script>
+        // 注文回数をカウントする関数
+        function cooutOrder(foodName)
+        {
+            // カウントようの変数
+            let cnt = 0;
+            // 内部の関数
+            function func()
+            {
+                // 呼ばれるとカウントを増やす
+                cnt++;
+
+                // 注文の呼び出し回数を返す
+                return `${foodName}:${cnt}`;
+            }
+
+            return func;
+        }
+
+        // 注文回数をカウントする関数を得る
+        const cntCoffee = cooutOrder("coffee");
+        const cntCake = cooutOrder("cake");
+
+        // 注文があるごとに管酢を呼び出してコンソールに出力
+        console.log(cntCoffee());
+        console.log(cntCake());
+        console.log(cntCake());
+        console.log(cntCoffee());
+
+        console.log(cntCake());
+        console.log(cntCake());
+
+    </script>
+  </head>
+</html>

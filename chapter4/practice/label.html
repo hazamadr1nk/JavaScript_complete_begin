@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <script>
+        // らべるouterのブロック
+        outer: 
+        {
+            console.log("outer before");
+
+            // ラベルinnerのブロック
+            inner: 
+            {
+                console.log("inner before");
+                break outer;
+                console.log("inner after");
+            }
+
+            console.log("outer after");
+        }
+
+        console.log("get out");
+    </script>
+  </head>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <script>
+        const arr = [1,2,,,,,,3];
+        let cnt = 0;
+
+        arr.forEach((x,i) => 
+        {
+            console.log(`要素${i}、値は${x}`);
+            cnt++;
+        });
+
+        console.log(`要素すうは${arr.length}、実行数は${cnt}`);
+    </script>
+  </head>
+</html>

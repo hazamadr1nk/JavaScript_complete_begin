@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <script>
+        // 入れ子になった関数
+        function fnc1(arg)
+        {
+            function fnc2(arg)
+            {
+                function fnc3(arg)
+                {
+                    // 入れ子で渡された因数を文字列化してコンソールに出力
+                    console.log(arg.toString());
+                }
+                fnc3(arg);
+            }
+            fnc2(arg);
+        }
+
+        // try catch
+        try
+        {
+            // 例外が起きるかもしれない処理
+            console.log("処理１");
+
+            // 引数をnull にして関数を実行
+            fnc1(null);
+
+            console.log("処理２");
+        }catch(e)
+        {
+            // 例外が起きた時の処理
+            console.log("エラー発生", e);
+        }
+    </script>
+  </head>
+</html>

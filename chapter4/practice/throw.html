@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <script>
+        // try catch
+        try
+        {
+            // エラーが起こるかもしれない処理
+            console.log("処理１");
+
+            // 文字列で例外を投げる
+            throw "文字列";
+
+            console.log("処理2");
+        }catch(e)
+        {
+            // エラーが起きた時の処理
+            console.log("エラー発生",e);
+        }
+
+        // try catch
+        try
+        {
+            // エラーが起こるかもしれない処理
+            console.log("処理１");
+
+            // エラーオブジェクトで例画を投げる
+            throw new Error("エラーオブジェクト");
+
+            console.log("処理２");
+        }catch(e)
+        {
+            // エラーが起きた時の処理
+            console.log("エラー発生",e);
+        }
+    </script>
+  </head>
+</html>
