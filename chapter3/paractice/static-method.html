@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <script>
+        const OBJ1 = {name: "chococake", price: 550};
+
+        console.log("keys: ", Object.keys(OBJ1));
+        console.log("values: ", Object.values(OBJ1));
+        console.log("entries: ", Object.entries(OBJ1));
+
+        const OBJ2 = {type: "food", timing: "after dinner"};
+
+        const OBJ3 = Object.assign(OBJ1,OBJ2);
+        
+        console.log("OBJ1: ", OBJ1);
+        console.log("OBJ2: ", OBJ2);
+        console.log("OBJ3: ", OBJ2);
+        </script>
+  </head>
+</html>

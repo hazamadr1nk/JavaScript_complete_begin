@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <script>
+        let test = true;
+        if(test)
+        {
+            let food = "ケーキ";
+            console.log("階層１: ", food);
+            if(test)
+            {
+                let food = "パン";
+                console.log("stage2: ", food);
+                if(test)
+                {
+                    console.log("stage3: ", food);
+                }
+                console.log("stage2: ",food);
+            }
+            console.log("stage1: ", food);
+        }
+    </script>
+  </head>
+</html>

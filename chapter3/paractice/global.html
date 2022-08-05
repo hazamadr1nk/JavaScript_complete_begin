@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <script>
+        let test = true;
+        if(test)
+        {
+            window.food = "cake";
+            console.log("localscope: ", food);
+            console.log("localscope: ", window.food);
+        }
+        console.log("globalscope: ", food);
+        console.log("globalscope: ", window.food);
+    </script>
+  </head>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <script>
+        const myMAP = new Map();
+        myMAP.set("coffee", 450);
+        myMAP.set("tea", 300);
+        myMAP.set("cake", 600);
+
+        console.log("size:", myMAP.size);
+        console.log("coffee: ",myMAP.get("coffee"));
+
+        myMAP.forEach(function(value, key)
+        {
+            console.log("forEach: ", key, " : ", value);
+        });
+        </script>
+  </head>
+</html>
