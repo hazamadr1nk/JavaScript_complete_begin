@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <script>
+        const re = /[¥d,¥-円]/g;
+
+        const s = "借金が1280円増えました。所持金は-2890円です。";
+        const iterator = s.matchAll(re);
+
+        for(const m of iterator){
+            console.log(m);
+        }
+    </script>
+  </head>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <script>
+        // 正規表現オブジェクノを生成
+        const re = /<.+?>/g;
+
+        const str1 = 'メニュー<apan class = "strong">コーヒー</strong>';
+        console.log(str1.match(re));
+
+        const str2 = "メニュー:コーヒー";
+        console.log(str2.match(re));
+    </script>
+  </head>
+</html>
