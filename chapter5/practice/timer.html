@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <script>
+        const start = Date.now();
+        const intervalID = setInterval(() => {
+            console.log(Date.now() - start, "繰り返し");
+        },100);
+
+        setTimeout(() => {
+            clearInterval(intervalID);
+            console.log(Date.now() - start, "停止");
+        },1000);
+    </script>
+  </head>
+</html>

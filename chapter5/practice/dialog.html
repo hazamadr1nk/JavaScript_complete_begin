@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <script>
+        const order = prompt("注文を入力してください","coffee");
+        if (order === null) {
+            alert("またのお越しをお待ちしております。");
+        }else
+        {
+            const takeout = confirm(`${order}ですね。店内でお召し上がりですか？`);
+
+
+            if(takeout){
+                alert("席をご用意しますのでお待ちください。");
+            }else{
+                alert("お持ち帰りですね。");
+            }
+        }
+        
+
+
+    </script>
+  </head>
+</html>
