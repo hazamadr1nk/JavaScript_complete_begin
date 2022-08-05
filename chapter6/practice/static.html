@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <script>
+        class Menu{
+            constructor(name, price){
+                this.name = name;
+                this.price = price;
+            }
+
+            // static method
+            static calcTax(price, taxPer){
+                const res = Math.trunc(price*(100+taxPer) / 100);
+                //　戻り値を戻す
+                return res;
+            }
+        }
+
+        // 税込み価格を計算する
+        console.log(Menu.calcTax(440, 10));
+        console.log(Menu.calcTax(460, 10));
+
+        Menu.MIN_PRICE = 100;
+        Menu.MAX_PRICE = 2000;
+
+        console.log(Menu.MIN_PRICE);
+        console.log(Menu.MAX_PRICE);
+        
+    </script>
+  </head>
+</html>
