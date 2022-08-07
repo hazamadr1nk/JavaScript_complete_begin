@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <textarea  id="src" cols="30" rows="10">注文はホットコーヒーとチョコパフェとトーストです。</textarea>
+    <textarea name="" id="dst" cols="30" rows="10"></textarea>
+    <script>
+        
+        //　要素を選択
+        const elSrc = document.querySelector("#src");
+        const elDst = document.querySelector("#dst");
+
+        // 要素ないの値を取得して、コンソールに出力
+        console.log(elSrc.value);
+
+        // 要素ないの書き換え
+        elDst.value = "本日のおすすめはスペシャルフルーツパフェです。";
+    </script>
+  </head>
+</html>

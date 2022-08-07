@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+
+    
+    <script>
+        
+    </script>
+  </head>
+  <body>
+    <div id="outer">
+        <a href="https://www.google.com/" id="link">
+            <span id="inner">リンク
+            </span>
+        </a>
+    </div>
+    <script>
+      // idがinnerの要素をクリックした時の関数を登録
+      document.querySelector("#inner").addEventListener("click", e=>{
+        console.log("#inner", e.returnValue, e.cancelBubble);
+
+        // デフォルトの処理を防ぐ
+        // e.returnValueがfaleseになる
+        e.preventDefault();
+      });
+
+      // idがlinkの要素をクリックした時の関数を登録
+      document.querySelector("#link").addEventListener("click", e=> {
+        // 伝播を停止する
+        // e.cancelBubbleがtrueになる
+        e.stopPropagation();
+        console.log("#link", e.returnValue, e.cancelBubble);
+      });
+
+      // idがouterの要素をクリックした時の関数を登録
+      document.querySelector("#outer").addEventListener("click", e=>{
+        console.log("#outer", e.returnValue, e.cancelBubble);
+      });
+    </script>
+  </body>
+</html>
