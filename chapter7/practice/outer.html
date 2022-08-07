@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <ul id="menu">
+        <li class="item">hotcoffee
+            <span style="color: red;">売り切れ</span>
+        </li>
+        <li class="item">icecoffee</li>
+        <li class="item">chococake</li>
+    </ul>
+
+    <script>
+        const elMenu = document.querySelector("#menu");
+        const elItems = document.querySelectorAll(".item");
+        
+        // 要素ないのテキストを取得して、コンソールに出力
+        console.log(elMenu.outerHTML);
+
+        // 要素ないのHTMLを書き換え
+        elItems[2].outerHTML = `<span style="color: red;">削除</span>`;
+
+        console.log(elMenu.outerHTML);
+    </script>
+  </head>
+</html>
